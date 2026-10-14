@@ -1,0 +1,16 @@
+{
+  "name": "filmcraft",
+  "version": "1.0.0",
+  "description": "Edit video projects with FilmCraft (Premiere Pro-style, ArtCraft suite) through MCP, the CLI or the control channel, and set up, connect or troubleshoot its MCP server on Windows and macOS.",
+  "author": {
+    "name": "Vinciux99"
+  },
+  "homepage": "https://github.com/Vinciux99/filmcraft-claude-skill",
+  "license": "MIT",
+  "keywords": [
+    "artcraft",
+    "filmcraft",
+    "mcp",
+    "skill"
+  ]
+}

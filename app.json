@@ -1,0 +1,60 @@
+{
+  "id": "filmcraft",
+  "name": "FilmCraft",
+  "tagline": "Premiere Pro-style video editor",
+  "upstream": "storytold/filmcraft",
+  "port": 9876,
+  "docsPort": 9876,
+  "launch": {
+    "args": [
+      "--control",
+      "{port}"
+    ]
+  },
+  "mcp": {
+    "server": "filmcraft",
+    "live": [
+      "mcp",
+      "--bridge",
+      "127.0.0.1:{port}"
+    ],
+    "headless": [
+      "mcp"
+    ],
+    "default": "live"
+  },
+  "windows": {
+    "dirs": [
+      "{ProgramFiles}\\FilmCraft",
+      "{LocalAppData}\\Programs\\FilmCraft"
+    ],
+    "app": "filmcraft.exe",
+    "cli": "filmcraft-cli.exe"
+  },
+  "macos": {
+    "bundles": [
+      "/Applications/FilmCraft.app",
+      "{home}/Applications/FilmCraft.app"
+    ],
+    "appBinary": "Contents/MacOS/FilmCraft",
+    "cliPaths": [
+      "{home}/.artcraft/bin/filmcraft-cli",
+      "/usr/local/bin/filmcraft-cli",
+      "/opt/homebrew/bin/filmcraft-cli",
+      "{bundle}/Contents/MacOS/filmcraft-cli"
+    ],
+    "cliReleaseAsset": "filmcraft-cli-{version}-macos-universal.zip",
+    "cliBinaryInZip": "filmcraft-cli"
+  },
+  "prepare": {
+    "dirs": []
+  },
+  "auth": {
+    "type": "none",
+    "notes": "Loopback only, no token."
+  },
+  "verified": {
+    "windows": true,
+    "macos": false
+  }
+}
